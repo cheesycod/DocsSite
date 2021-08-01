@@ -13,12 +13,12 @@ module.exports = {
       resolve: "gatsby-theme-apollo-docs",
       options: {
         root: __dirname,
-        algoliaApiKey: "9bfd968ece86da2054ca34939340f716",
-        algoliaIndexName: "top-gg",
-        siteName: "Top.gg documentation",
-        description: "Top.gg developer documentation",
-        githubRepo: "top-gg/docs",
-        baseUrl: "https://docs.top.gg",
+        algoliaApiKey: "Hmmmm",
+        algoliaIndexName: "ibl-docs",
+        siteName: "Infinity Docs",
+        description: "Official Documentation for the Infinity Bot List Website and API",
+        githubRepo: "ChillCordDev/API-Docs",
+        baseUrl: "https://docs.botlist.site",
         // defaultVersion: "0",
         // versions: {
         //   1: "version-1",
