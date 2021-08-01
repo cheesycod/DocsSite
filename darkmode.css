@@ -1,12 +1,12 @@
 :root {
   --background: #16151d;
-  --background-secondary: #161b20;
+  --background-secondary: #2C2F33;
   --text: #c9d1d9;
   --text-secondary: #b3bdc7;
   --text-tertiary: #5f6c79;
   --accent: #8969FE;
-  --accent-dark: #11161d;
-  --accent-secondary: #515d71;
+  --accent-dark: #2C2F33;
+  --accent-secondary: #7289DA;
   --border: #2f3948;
 }
 h1,
