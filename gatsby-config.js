@@ -24,7 +24,7 @@ module.exports = {
         //   1: "version-1",
         // },
         sidebarCategories: {
-           api: filesOf("api")
+           api: filesOf("api"),
         },
       },
     },
