@@ -2,8 +2,6 @@
 
 # Main Files
 index.js @ChillCodDev
-yarn.lock @ChillCordDev
-package.json @ChillCordDev
 
 # Gatsby Stuff
 gatsby-node.js @ChillCordDev
