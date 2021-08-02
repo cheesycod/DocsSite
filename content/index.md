@@ -1,13 +1,17 @@
 ---
 title: Home
-description: Welcome to Top.gg
+description: Welcome to the Infinity Docs
 ---
 
-Hi developer 🥰, welcome to top.gg developer docs. You are currently viewing **v0** of our API documentation. We're going to be working on the next version of the top.gg API (v1) soon, stay tuned!
+Hey there 👋, welcome to our Official Documentation!
+
+---
 
 ## Getting Started
 
 If you're looking for API usage, check out the `API` section on the sidebar.
+
+--- 
 
 ## Getting Help
 
