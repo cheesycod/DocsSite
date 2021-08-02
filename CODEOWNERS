@@ -6,6 +6,9 @@ index.js @ChillCodDev
 # Gatsby Stuff
 gatsby-config.js @TheRealToxicDev
 
+# Images
+src/assets/logo.svg @ChillCordDev
+
 # Main Docs
 content/index.md @ChillCordDev
 
