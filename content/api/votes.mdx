@@ -6,8 +6,14 @@ author: ChillCordDev
 
 import HTTPHeader from "@components/HTTPHeader";
 
-# Voting 
-Users can currently vote every 12 hours for each bot.
+We offer a custom Voting System as a way for users to support their favorite bots.
+Users can currently vote for a bot every 12 hours, but this restriction may change in the future.
+
+<HTTPHeader type="POST" path="/bots/BOT_ID/vote" />
+
+> Certified Bots can be found using either the Bot Name or Bot ID. Example below 👇
+
+<HTTPHeader type="POST" path="/bots/infinity/vote" />
 
 ---
 
