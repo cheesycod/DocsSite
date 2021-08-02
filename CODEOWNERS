@@ -4,9 +4,7 @@
 index.js @ChillCodDev
 
 # Gatsby Stuff
-gatsby-node.js @ChillCordDev
 gatsby-config.js @TheRealToxicDev
-gatsby-browser.js @ChillCordDev
 
 # Main Docs
 content/index.md @ChillCordDev
