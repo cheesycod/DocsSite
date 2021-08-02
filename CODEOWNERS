@@ -1,11 +1,14 @@
 # Main
 content/index.md @ChillCordDev
+
 # API
 content/api/@intro.mdx @ChillCordDev
 content/api/user.mdx @ChillCordDev
 content/api/bot.mdx @ChillCordDev
 content/api/votes.mdx @ChillCordDev
+
 # Libraries
 content/libraries/javascript.mdx @TheRealToxicDev
+
 # Resources
 content/resources/ratelimits.mdx @ChillCordDev
