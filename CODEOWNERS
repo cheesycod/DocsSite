@@ -2,6 +2,9 @@
 darkmode.css @TheRealToxicDev
 content/index.md @ChillCordDev
 
+# Legal
+LICENSE @ChillCordDev
+
 # API
 content/api/@intro.mdx @ChillCordDev
 content/api/user.mdx @ChillCordDev
