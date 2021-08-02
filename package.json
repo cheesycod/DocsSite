@@ -3,7 +3,7 @@
   "name": "infinity-api-docs",
   "description": "API Documentation for Infinity Bot List and its companion API and Discord Server",
   "license": "MIT",
-  "main": "index.js"
+  "main": "index.js",
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build"
