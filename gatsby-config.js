@@ -19,10 +19,6 @@ module.exports = {
         description: "Official Documentation for the Infinity Bot List Website and API",
         githubRepo: "ChillCordDev/API-Docs",
         baseUrl: "https://docs.botlist.site",
-        // defaultVersion: "0",
-        // versions: {
-        //   1: "version-1",
-        // },
         sidebarCategories: {
            api: filesOf("api"),
         },
