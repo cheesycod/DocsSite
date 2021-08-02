@@ -90,7 +90,7 @@ main > header > div {
 }
 
 :not(pre) > code[class*="language-"] {
-  color: #d4b27f;
+  color: #7289DA;
 }
 
 [class*="AsideLinkInner"]:hover,
