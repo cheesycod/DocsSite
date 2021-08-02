@@ -25,7 +25,7 @@ module.exports = {
         // },
         sidebarCategories: {
           // null: ["getting-started"],
-          resources: filesOf("resources"),
+          // resources: filesOf("resources"),
           // libraries: filesOf("libraries"),
           api: filesOf("api"),
         },
