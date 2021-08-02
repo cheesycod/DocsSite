@@ -15,6 +15,4 @@ If you're looking for API usage, check out the `API` section on the sidebar.
 
 ## Getting Help
 
-If you need some help or think you have spotted a problem with our API you can talk to us in our [`#topgg-api`](https://discord.com/channels/264445053596991498/412006692125933568) channel in our [discord server](https://discord.gg/EYHTgJX).
-
-In the server you can ask questions about our official API Libraries or general queries about the API.
+If you need some help or think you have spotted a problem with our API you can talk to us in our [`#api-support`](https://discord.com/channels/758641373074423808/826363644295643136) channel in our [discord server](https://infinitybotlist.com/discord).
