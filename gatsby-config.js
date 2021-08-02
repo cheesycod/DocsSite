@@ -20,6 +20,7 @@ module.exports = {
         githubRepo: "ChillCordDev/API-Docs",
         baseUrl: "https://docs.botlist.site",
         sidebarCategories: {
+        // null: ["getting-started"],
            api: filesOf("api"),
         },
       },
