@@ -1,9 +1,13 @@
 ---
 title: Ratelimits
-description: Global and route-specific rate limits
+description: Information on how we use and enforce Ratelimits
 ---
 
-The HTTP API implements a process for limiting and preventing spam requests. API users that regularly hit and ignore the limit will be blocked from our platform. These rate limits are in place to help prevent the abuse and overload of our services.
+Our API implements a process for limiting and preventing spam requests. 
+API users that regularly hit and ignore the limit will be blocked from our platform. 
+These rate limits are in place to help prevent the abuse and overload of our services.
+
+--- 
 
 ## Global Ratelimit
 
@@ -13,6 +17,8 @@ Global rate limits are applied on all routes
 | ----- | ------------ | ------------ | ------------ |
 | `*`   | \*           | 100/second   | 1 hour block |
 
+---
+
 ## Resource-Specific Ratelimits
 
 Certain endpoints have tighter restrictions on their rate limits. Global rate limits still apply to requests sent to these.
@@ -20,6 +26,8 @@ Certain endpoints have tighter restrictions on their rate limits. Global rate li
 | Route     | Request Type | Max Requests | Throttle     |
 | --------- | ------------ | ------------ | ------------ |
 | `/bots/*` | \*           | 60/minute    | 1 hour block |
+
+---
 
 ## Exceeding a Rate Limit
 
