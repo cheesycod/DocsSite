@@ -3,6 +3,8 @@ title: Javascript
 description: Our Official Javascript Library!
 ---
 
+import HTTPHeader from "@components/HTTPHeader";
+
 <div align="center">
   <p>
     <a href="https://nodei.co/npm/infinityapi.js/"><img src="https://nodei.co/npm/infinityapi.js.png?downloads=true&stars=true" alt="npm installnfo" /></a>
@@ -33,13 +35,11 @@ You can POST Server and Shard Count stats once every 5 minutes
 
 ---
 
----
-
 ## POST Method
 
-```
-/bot/:botid
-```
+<HTTPHeader type="GET" path="/bot/:botid" />
+
+---
 
 ###### Responses
 Status | Code | Description
@@ -99,9 +99,7 @@ client.login("token")
 
 ## GET Bot
 
-```
-/bot/:botid
-```
+<HTTPHeader type="GET" path="/bot/:botid" />
 
 ### Constructor
 
