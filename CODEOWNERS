@@ -1,3 +1,5 @@
 content/index.md @ChillCordDev
-content/api/@reference.mdx @ChillCordDev
+content/api/@intro.mdx @ChillCordDev
 content/api/user.mdx @ChillCordDev
+content/api/bot.mdx @ChillCordDev
+content/api/votes.mdx @ChillCordDev
