@@ -23,12 +23,12 @@ module.exports = {
         // versions: {
         //   1: "version-1",
         // },
-        sidebarCategories: {
+        //sidebarCategories: {
           // null: ["getting-started"],
-          resources: filesOf("resources"),
-          libraries: filesOf("libraries"),
-          api: filesOf("api"),
-        },
+          //resources: filesOf("resources"),
+          //libraries: filesOf("libraries"),
+          //api: filesOf("api"),
+        //},
       },
     },
     "gatsby-plugin-styled-components",
