@@ -1,6 +1,11 @@
 # Please follow the Layout Provided.
 
-# Main
+# Main Files
+index.js @ChillCodDev
+yarn.lock @ChillCordDev
+package.json @ChillCordDev
+
+# Main Docs
 content/index.md @ChillCordDev
 
 # Styling
