@@ -4,8 +4,14 @@
   Infinity Documentation
 </h2>
 
-<hr />
+<br />
 
 <p>
  Official Documentation site for the Infinity Bot List Website, Discord Server, Staff Team and API
 </p>
+
+<hr />
+
+<h3>
+Made with ❤️ Using:
+</h3>
