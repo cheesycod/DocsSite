@@ -9,31 +9,15 @@ import HTTPHeader from "@components/HTTPHeader";
 
 --- 
 
-## Find One Bot
-
-<HTTPHeader type="GET" path="bots/:bot_id" />
-
-Finds a single bot
-
-### Example Response
-
-[`Bot`](/api/bot/#example-structure) **or** 404
-
---- 
-
 ## GET Bot stats
 
 <HTTPHeader type="POST" path="bot/:bot_id" />
 
 Specific stats about a bot.
 
-### Response
+### Example Response
 
-| Field         | Type       | Description                                                                    |
-| ------------- | ---------- | ------------------------------------------------------------------------------ |
-| server_count? | `number`   | The amount of servers the bot is in                                            |
-| shards        | `string[]` | The amount of servers the bot is in per shard. Always present but can be empty |
-| shard_count?  | `number`   | The amount of shards a bot has                                                 |
+[`Bot`](/api/bot/#example-structure) **or** 404                                                |
 
 ---
 
@@ -118,4 +102,16 @@ programs":{
  }
 }
 
+```
+
+---
+
+## Example 400 Structure
+
+```json
+{
+  "message":"Unable to find that bot! Has it been approved?",
+  "error":true,
+  "status":400
+}
 ```
