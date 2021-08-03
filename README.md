@@ -3,3 +3,9 @@
   <br> 
   Infinity Documentation
 </h2>
+
+<hr />
+
+<p>
+ Official Documentation site for the Infinity Bot List Website, Discord Server, Staff Team and API
+</p>
