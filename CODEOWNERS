@@ -11,6 +11,7 @@ src/assets/logo.svg @ChillCordDev
 
 # Components
 src/components/Logo.jsx @ChillCordDev
+src/components/HTTPHeader.jsx @ChillCordDev
 
 # Main Docs
 content/index.md @ChillCordDev
