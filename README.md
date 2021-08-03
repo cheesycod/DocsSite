@@ -19,3 +19,8 @@ Made with ❤️ Using
   <li>Gatsby</li>
   <li>Apollo</li>
 </ol>
+
+<hr />
+
+<h3>Self Hosting</h3>
+
