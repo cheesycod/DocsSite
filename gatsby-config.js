@@ -20,7 +20,7 @@ module.exports = {
         headerButtonLink: "https://infinitybotlist.com/",
         discordUrl: "https://infinitybotlist.com/discord",
         twitterHandle: "InfinityBotList",
-        description: "Official Documentation for the Infinity Bot List Website and API",
+        description: "Official Documentation for the Infinity Bot List Website, Discord Server, Staff Team and API",
         githubRepo: "ChillCordDev/API-Docs",
         baseUrl: "https://docs.botlist.site",
         // defaultVersion: "0",
