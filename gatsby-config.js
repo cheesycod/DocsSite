@@ -32,6 +32,7 @@ module.exports = {
           api: filesOf("api"),
           resources: filesOf("resources"),
           libraries: filesOf("libraries"),
+          server: filesOf("server"),
         },
       },
     },
