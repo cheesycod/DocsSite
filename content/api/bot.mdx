@@ -7,68 +7,7 @@ import HTTPHeader from "@components/HTTPHeader";
 
 > Bot endpoints are subject to [stricter rate limits](/resources/ratelimits#resource-specific-ratelimits) than others.
 
-## Search Bots
-
-<HTTPHeader type="GET" path="bots" />
-
-Gets a list of bots that match a specific query.
-
-### Query String Parameters
-
-| Field  | Type     | Description                                                    | Default    |
-| ------ | -------- | -------------------------------------------------------------- | ---------- |
-| limit  | `number` | The amount of bots to return. Max. 500                         | 50         |
-| offset | `number` | Amount of bots to skip                                         | 0          |
-| search | `string` | A search string in the format of `field: value field2: value2` |            |
-| sort   | `string` | The field to sort by. Prefix with - to reverse the order       |            |
-| fields | `string` | A comma separated list of fields to show                       | All fields |
-
-### Response Fields
-
-| Field   | Type                      | Description                                   |
-| ------- | ------------------------- | --------------------------------------------- |
-| results | [`Bot[]`](#bot-structure) | The matching bots                             |
-| limit   | `number`                  | The limit used                                |
-| offset  | `number`                  | The offset used                               |
-| count   | `number`                  | The length of the results array               |
-| total   | `number`                  | The total number of bots matching your search |
-
-```json:title=/bots?search%3DLuca
-{
-  "results": [
-    {
-      "defAvatar": "6debd47ed13483642cf09e832ed0bc1b",
-      "invite": "",
-      "website": "https://discordbots.org",
-      "support": "KYZsaFb",
-      "github": "https://github.com/DiscordBotList/Luca",
-      "longdesc": "Luca only works in the **Discord Bot List** server.    \r\nPrepend commands with the prefix `-` or `@Luca#1375`.    \r\n**Please refrain from using these commands in non testing channels.**\r\n- `botinfo @bot` Shows bot info, title redirects to site listing.\r\n- `bots @user`* Shows all bots of that user, includes bots in the queue.\r\n- `owner / -owners @bot`* Shows all owners of that bot.\r\n- `prefix @bot`* Shows the prefix of that bot.\r\n* Mobile friendly version exists. Just add `noembed` to the end of the command.\r\n",
-      "shortdesc": "Luca is a bot for managing and informing members of the server",
-      "prefix": "- or @Luca#1375",
-      "lib": "discord.js",
-      "clientid": "264811613708746752",
-      "avatar": "7edcc4c6fbb0b23762455ca139f0e1c9",
-      "id": "264811613708746752",
-      "discriminator": "1375",
-      "username": "Luca",
-      "date": "2017-04-26T18:08:17.125Z",
-      "server_count": 2,
-      "guilds": ["417723229721853963", "264445053596991498"],
-      "shards": [],
-      "monthlyPoints": 19,
-      "points": 397,
-      "certifiedBot": false,
-      "owners": ["129908908096487424"],
-      "tags": ["Moderation", "Role Management", "Logging"],
-      "donatebotguildid": ""
-    }
-  ],
-  "limit": 1,
-  "offset": 0,
-  "count": 1,
-  "total": 7
-}
-```
+--- 
 
 ## Find One Bot
 
@@ -102,9 +41,9 @@ This example uses Luca but users are restricted to only receiving their own bots
 ]
 ```
 
-## Bot stats
+## GET Bot stats
 
-<HTTPHeader type="GET" path="bots/:bot_id/stats" />
+<HTTPHeader type="POST" path="bot/:bot_id" />
 
 Specific stats about a bot.
 
@@ -116,27 +55,9 @@ Specific stats about a bot.
 | shards        | `string[]` | The amount of servers the bot is in per shard. Always present but can be empty |
 | shard_count?  | `number`   | The amount of shards a bot has                                                 |
 
-## Individual User Vote
+---
 
-<HTTPHeader type="GET" path="bots/:bot_id/check" />
-
-Checking whether or not a user has voted for your bot. Safe to use even if you have over 1k monthly votes.
-
-### Params
-
-| Field  | Type        | Description       |
-| ------ | ----------- | ----------------- |
-| userId | `snowflake` | User's Discord ID |
-
-### Example Response
-
-```json:title=/bots/9876/check?userId%3D1234
-{
-  "voted": 1
-}
-```
-
-## Post Stats
+## POST Bot Stats
 
 <HTTPHeader type="POST" path="bots/:bot_id/stats" />
 
@@ -148,6 +69,8 @@ Checking whether or not a user has voted for your bot. Safe to use even if you h
 | shards       | `number[]`             | Amount of servers the bot is in per shard.                                                        | ❌       |
 | shard_id     | `number`               | The zero-indexed id of the shard posting. Makes server_count set the shard specific server count. | ❌       |
 | shard_count  | `number`               | The amount of shards the bot has.                                                                 | ❌       |
+
+---
 
 ## Bot Structure
 
@@ -177,6 +100,8 @@ Checking whether or not a user has voted for your bot. Safe to use even if you h
 | points           | `number`      | The amount of upvotes the bot has                                             |
 | monthlyPonumbers | `number`      | The amount of upvotes the bot has this month                                  |
 | donatebotguildid | `string`      | The guild id for the donatebot setup                                          |
+
+---
 
 ### Example Structure
 
