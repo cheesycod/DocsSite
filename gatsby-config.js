@@ -17,7 +17,7 @@ module.exports = {
         algoliaIndexName: "ibl-docs",
         siteName: "Infinity Docs",
         headerButtonText: "Main Site",
-        headerButtonLink: "https://infinitybotlist.com//",
+        headerButtonLink: "https://infinitybotlist.com/",
         discordUrl: "https://infinitybotlist.com/discord",
         twitterHandle: "InfinityBotList",
         description: "Official Documentation for the Infinity Bot List Website and API",
