@@ -19,27 +19,7 @@ Finds a single bot
 
 [`Bot`](/api/bot/#example-structure) **or** 404
 
-## Last 1000 Votes
-
-<HTTPHeader type="GET" path="bots/:bot_id/votes" />
-
-Gets the last 1000 voters for your bot.
-
-> If your bot receives more than 1000 votes monthly you cannot use this endpoints and must use `webhooks` and implement your own caching instead.
-
-This example uses Luca but users are restricted to only receiving their own bots' votes. Replace the id with your own bot.
-
-### Example Response
-
-```json:title=/bots/1234/votes
-[
-  {
-    "username": "Xetera",
-    "id": "140862798832861184",
-    "avatar": "a_1241439d430def25c100dd28add2d42f"
-  }
-]
-```
+--- 
 
 ## GET Bot stats
 
