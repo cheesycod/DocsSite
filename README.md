@@ -27,5 +27,7 @@ Made with ❤️ Using
  • We will offer no support or assistance in Self-Hosting or Setting up your own instance of this Docs Site.
 <br /><br />
  • This website is public simply for the purpose of allowing Open Collaborations from our Members and Developer's.
+<br /><br />
+ • If you are familiar with or have experience hosting a Gatsby based website then you are more then welcome to Self Host it.
 </p>
 
