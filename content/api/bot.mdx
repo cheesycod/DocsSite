@@ -11,7 +11,7 @@ import HTTPHeader from "@components/HTTPHeader";
 
 ## GET Bot stats
 
-<HTTPHeader type="POST" path="bot/:bot_id" />
+<HTTPHeader type="GET" path="bot/:bot_id" />
 
 Fetch some information about a specific bot from our API.
 
@@ -81,8 +81,7 @@ Fetch some information about a specific bot from our API.
 
 ### Example Structure
 
-```json
-
+```json:title=HTTP%20200
 {
 "name":"Infinity Bot List",
 "tags":"Customizable Prefix, Configuration, Crypto, Soundboard, Media",
@@ -121,7 +120,7 @@ programs":{
 
 ## Example 400 Structure
 
-```json
+```json:title=HTTP%20400
 {
   "message":"Unable to find that bot! Has it been approved?",
   "error":true,
