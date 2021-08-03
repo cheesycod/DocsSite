@@ -25,6 +25,13 @@ Specific stats about a bot.
 
 <HTTPHeader type="POST" path="bots/:bot_id/stats" />
 
+### Ratelimits 
+
+| Route           | Request Type | Max Requests | Throttle     |
+| --------------- | ------------ | ------------ | ------------ |
+| `/bots/:botID`  | `POST`       | 3/5 Minutes  | 30 Min block |
+
+
 ### Post Headers
 
 | Field        | Type                   | Description                                                                                       | Required |
