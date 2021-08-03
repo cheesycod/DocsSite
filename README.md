@@ -11,5 +11,11 @@
 <hr />
 
 <h3>
-Made with ❤️ Using:
+Made with ❤️ Using
 </h3>
+<ol>
+  <li>React</li>
+  <li>Node</li>
+  <li>Gatsby</li>
+  <li>Apollo</li>
+</ol>
