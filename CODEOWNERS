@@ -11,6 +11,7 @@ gatsby-config.js @TheRealToxicDev
 src/assets/logo.svg @ChillCordDev
 src/assets/discord.svg @ChillCordDev
 src/assets/github.svg @ChillCordDev
+src/assets/twitter.svg @ChillCordDev
 
 # Components
 src/components/Logo.jsx @ChillCordDev
