@@ -5,56 +5,43 @@ description: User Specific API Documentation.
 
 import HTTPHeader from "@components/HTTPHeader";
 
-A user represents a User account in top.gg. It is not associated with any other platform like Discord.
+A user represents a Account used to Access/Login to our site. 
+It is not associated with any other platform like Discord.
+However we do store some of your Discord User Info such as ID and Username.
 
 ## Find One User
 
-<HTTPHeader type="GET" path="users/:user_id" />
+<HTTPHeader type="GET" path="user/:user_id" />
 
-Retrieves information about a particular user by their Discord user id.
+Retrieves information about a particular user based on their User ID.
 
-```bash
-curl -X GET https://top.gg/api/users/140862798832861184 \
- -H 'Content-Type: application/json' \
- -H 'Authorization: your-topgg-token'
-```
+---
 
 ## Structure
 
-| Field             | Type        | Description                                                       |
-| ----------------- | ----------- | ----------------------------------------------------------------- |
-| id                | `snowflake` | The id of the user                                                |
-| username          | `string`    | The username of the user                                          |
-| discriminator     | `string`    | The discriminator of the user                                     |
-| avatar?           | `string`    | The avatar hash of the user's avatar                              |
-| defAvatar         | `string`    | The cdn hash of the user's avatar if the user has none            |
-| bio?              | `string`    | The bio of the user                                               |
-| banner?           | `string`    | The banner image url of the user                                  |
-| social            | `object`    | The social usernames of the user                                  |
-| social.youtube?   | `string`    | The youtube channel id of the user                                |
-| social.reddit?    | `string`    | The reddit username of the user                                   |
-| social.twitter?   | `string`    | The twitter username of the user                                  |
-| social.instagram? | `string`    | The instagram username of the user                                |
-| social.github?    | `string`    | The github username of the user                                   |
-| color?            | `string`    | The custom hex color of the user (not guaranteed to be valid hex) |
-| supporter         | `boolean`   | The supporter status of the user                                  |
-| certifiedDev      | `boolean`   | The certified status of the user                                  |
-| mod               | `boolean`   | The mod status of the user                                        |
-| webMod            | `boolean`   | The website moderator status of the user                          |
-| admin             | `boolean`   | The admin status of the user                                      |
+| Field     | Type        | Description                                                                                         |
+| --------- | ----------- | --------------------------------------------------------------------------------------------------- |
+| nickname  | `String`    | Nickname for the User on our Website.                                                               |
+| about     | `String`    | Some information about the User.                                                                    |
+| certified_dev | `Boolean` | The users IBL Certified Dev Status.                                                               |
+| developer | `Boolean`    | The users Developer Status (Bot Dev).                                                              |
+| staff     | `Boolean`    | If the User is IBL Staff (True or False).                                                          |
+| website   | `String`     | Link to the Users Personal Website/Portfolio.                                                      |
+| github     | `String`    | Link to the Users GitHub Page or Organization.                                                     |
 
-```json
+
+```json:title=Example%20Response
+
 {
-  "discriminator": "0001",
-  "avatar": "a_1241439d430def25c100dd28add2d42f",
-  "id": "140862798832861184",
-  "username": "Xetera",
-  "defAvatar": "322c936a8c8be1b803cd94861bdfa868",
-  "admin": true,
-  "webMod": true,
-  "mod": true,
-  "certifiedDev": false,
-  "supporter": false,
-  "social": {}
+  "nickname":"PrettyChillDev",
+  "about":"Just your Typical Full-Stack Dev.",
+  "certified_dev":false,
+  "staff":true,
+  "developer":true,
+  "links":{
+    "website":"https://prettychill.dev",
+    "github":"https://github.com/TheRealToxicDev"
+   }
 }
+
 ```
