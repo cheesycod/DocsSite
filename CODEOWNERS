@@ -36,3 +36,7 @@ content/libraries/java.mdx @Zone-Infinity
 # Resources
 content/resources/ratelimits.mdx @ChillCordDev
 content/resources/webhooks.mdx @ChillCordDev
+
+# Server
+content/server/bot-rules.mdx @ChillCordDev
+content/server/server-rules.mdx @ChillCordDev
