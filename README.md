@@ -23,4 +23,9 @@ Made with ❤️ Using
 <hr />
 
 <h3>Self Hosting</h3>
+<p>
+ • We will offer no support or assistance in Self-Hosting or Setting up your own instance of this Docs Site.
+<br />
+ • This website is public simply for the purpose of allowing Open Collaborations from our Members and Developer's.
+</p>
 
