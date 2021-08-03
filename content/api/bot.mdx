@@ -25,14 +25,20 @@ Specific stats about a bot.
 
 <HTTPHeader type="POST" path="bots/:bot_id/stats" />
 
+### Post Headers
+
+| Field        | Type                   | Description                                                                                       | Required |
+| ------------ | ---------------------- | ------------------------------------------------------------------------------------------------- | -------- |
+| authorization | `String`              | The Bots `Infinity Bots API Token`                                                                | ✔️       |
+
+
 ### Post Body
 
 | Field        | Type                   | Description                                                                                       | Required |
 | ------------ | ---------------------- | ------------------------------------------------------------------------------------------------- | -------- |
-| server_count | `number` \| `number[]` | Amount of servers the bot is in. If an Array, it acts like shards                                 | ✔️       |
-| shards       | `number[]`             | Amount of servers the bot is in per shard.                                                        | ❌       |
-| shard_id     | `number`               | The zero-indexed id of the shard posting. Makes server_count set the shard specific server count. | ❌       |
-| shard_count  | `number`               | The amount of shards the bot has.                                                                 | ❌       |
+| botid        | `Snowflake`            | The Bots Discord Client ID                                                                        | ✔️       |
+| servers      | `Number`               | Amount of servers the bot is in.                                                                  | ✔️       |
+| shards       | `Number`               | Amount of shards the bot has.                                                                     | ❌       |
 
 ---
 
