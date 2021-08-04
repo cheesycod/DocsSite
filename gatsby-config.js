@@ -13,7 +13,7 @@ module.exports = {
       resolve: "gatsby-theme-apollo-docs",
       options: {
         root: __dirname,
-        algoliaApiKey: "Hmmmm",
+        algoliaApiKey: "2265493e61011c466c2c8bffdec13032",
         algoliaIndexName: "ibl-docs",
         siteName: "Infinity Docs",
         headerButtonText: "Main Site",
