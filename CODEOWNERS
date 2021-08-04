@@ -36,6 +36,7 @@ content/api/votes.mdx @ChillCordDev
 # Libraries
 content/libraries/javascript.mdx @TheRealToxicDev
 content/libraries/java.mdx @Zone-Infinity
+content/libraries/python.mdx @cheesycod
 
 # Resources
 content/resources/ratelimits.mdx @ChillCordDev
@@ -44,3 +45,6 @@ content/resources/webhooks.mdx @ChillCordDev
 # Server
 content/server/bot-rules.mdx @ChillCordDev
 content/server/server-rules.mdx @ChillCordDev
+
+# Staff
+content/staff/infractions.mdx @TheRealToxicDev
