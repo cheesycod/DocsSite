@@ -3,19 +3,11 @@ title: Ratelimits
 description: Information on how we use and enforce Ratelimits
 ---
 
-Our API implements a process for limiting and preventing spam requests. API users that regularly hit and ignore the limit will be blocked from our platform. These rate limits are in place to help prevent the abuse and overload of our services.
+Our API implements a process for limiting and preventing spam requests. 
+API users that regularly hit and ignore the limit will be blocked from our platform. 
+These rate limits are in place to help prevent the abuse and overload of our services.
 
 --- 
-
-## Global Ratelimit
-
-Global rate limits are applied on all routes
-
-| Route | Request Type | Max Requests | Throttle     |
-| ----- | ------------ | ------------ | ------------ |
-| `*`   | \*           | 100/second   | 1 hour block |
-
----
 
 ## Resource-Specific Ratelimits
 
@@ -23,17 +15,19 @@ Certain endpoints have tighter restrictions on their rate limits. Global rate li
 
 | Route     | Request Type | Max Requests | Throttle     |
 | --------- | ------------ | ------------ | ------------ |
-| `/bots/*` | \*           | 60/minute    | 1 hour block |
+| `/bots/*` | GET or POST  | 3/5 minutes  | 30 Min block |
+| `/user/*` | GET          | 3/5 minutes  | 30 Min block |
+| `/votes/*` | GET         | 3/5 minutes  | 30 Min block |
 
 ---
 
 ## Exceeding a Rate Limit
 
-If you exceed the set rate limit for the API you will receive a HTTP 429 and be blocked from posting to the API for one hour.
+If you exceed the set rate limit for the API you will receive a HTTP 429 and be blocked from posting to the API for up to 30 Minutes.
 
 ```json:title=HTTP%20429
 {
-  "retry-after": 3600
+  "retry-after": 1800
 }
 ```
 

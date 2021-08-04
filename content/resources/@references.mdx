@@ -3,9 +3,11 @@ title: References
 description: Simple little cheat sheet for our API Usage.
 ---
 
+import HTTPHeader from "@components/HTTPHeader";
+
 ## POST Requests
 
----
+<HTTPHeader type="POST" path="/bot/:botID" />
 
 ###### Acceptable Parameters (BODY)
 | Field     | Type        | Description                                                                        |
@@ -13,37 +15,39 @@ description: Simple little cheat sheet for our API Usage.
 | servers   | `String`    | Server Count for the Provided Bot.                                                 |
 | shards    | `String`    | Shard Count for the Provided Bot.                                                  |
 
---- 
 
 ###### Acceptable HEADERS
 | Field     | Type        | Description                                                                        |
 | --------- | ----------- | ---------------------------------------------------------------------------------- |
 | authorization   | `String`    | The Bots IBL API Authorization Token.                                        |
-| Content-Type    | `String`    | The Content-Type of the Data should be (application/json).                                            |
+| Content-Type    | `String`    | The Content-Type of the Data should be (application/json).                   |
 
 ---
 
 ## GET Requests
 
----
+### Get User Data
 
-## Get User Data
+<HTTPHeader type="GET" path="/user/:userID" />
+
 Display some info about a Specified User.
 
-###### Flags
+###### Flags 
 | Field     | Type        | Description                                                                                         |
 | --------- | ----------- | --------------------------------------------------------------------------------------------------- |
-| nickname  | `String`    | Nickname for the User on our Website.                                                 |
-| about     | `String`    | Some information about the User.                                                   |
-| certified_dev | `Boolean` | The users IBL Certified Dev Status.                                                                   |
-| developer | `Boolean`    | The users Developer Status (Bot Dev).                                                               |
-| staff     | `Boolean`    | If the User is IBL Staff (True or False).                                                               |
-| website   | `String`     | Link to the Users Personal Website/Portfolio.                                                               |
-| github     | `String`    | Link to the Users GitHub Page or Organization.                                                               |
+| nickname  | `String`    | Nickname for the User on our Website.                                                               |
+| about     | `String`    | Some information about the User.                                                                    |
+| certified_dev | `Boolean` | The users IBL Certified Dev Status.                                                               |
+| developer | `Boolean`   | The users Developer Status (Bot Dev).                                                               |
+| staff     | `Boolean`   | If the User is IBL Staff (True or False).                                                           |
+| website   | `String`    | Link to the Users Personal Website/Portfolio.                                                       |
+| github    | `String`    | Link to the Users GitHub Page or Organization.                                                      |
 
---- 
 
-## GET User Data
+### GET Bot Data
+
+<HTTPHeader type="GET" path="/bot/:botID" />
+
 Display some info about a Specified Bot.
 
 ###### Flags
@@ -76,14 +80,21 @@ Display some info about a Specified Bot.
 
 ---
 
-## GET Vote Data
+### GET Vote Data
+
+<HTTPHeader type="GET" path="/votes/:botID" />
+
 Display your bot's 5 Most Recent Votes by User ID
+
+###### Acceptable HEADERS
+| Field     | Type        | Description                                                                        |
+| --------- | ----------- | ---------------------------------------------------------------------------------- |
+| authorization   | `String`    | The Bots IBL API Authorization Token.                                        |
+| Content-Type    | `String`    | The Content-Type of the Data should be (application/json).                   |
 
 ###### Flags
 | Field     | Type        | Description                                                                                         |
 | --------- | ----------- | --------------------------------------------------------------------------------------------------- |
 | bot_votes | `Array`     | Array of the last 5 Discord IDs for the Users who Voted.                                            |
-
-
 
 ---
