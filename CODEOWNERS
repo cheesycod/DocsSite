@@ -18,6 +18,9 @@ src/components/Logo.jsx @ChillCordDev
 src/components/HTTPHeader.jsx @ChillCordDev
 src/components/Message.jsx @ChillCordDev
 
+# Source
+src/ @ChillCordDev
+
 # Main Docs
 content/index.md @ChillCordDev
 
