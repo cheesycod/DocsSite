@@ -42,6 +42,8 @@ content/libraries/python.mdx @cheesycod
 content/resources/ratelimits.mdx @ChillCordDev
 content/resources/webhooks.mdx @ChillCordDev
 content/resources/widgets.mdx @TheRealToxicDev
+content/resources/usage.mdx @TheRealToxicDev
+content/resources/downtime.mdx @TheRealToxicDev
 
 # Server
 content/server/bot-rules.mdx @ChillCordDev
