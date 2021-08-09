@@ -30,9 +30,9 @@ module.exports = {
         sidebarCategories: {
           // null: ["getting-started"],
           api: filesOf("api"),
-          resources: filesOf("resources"),
           libraries: filesOf("libraries"),
           programs: filesOf("programs"),
+          resources: filesOf("resources"),
           server: filesOf("server"),
           staff: filesOf("staff"),
         },
