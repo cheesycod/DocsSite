@@ -14,9 +14,9 @@ src/components/Message.jsx @ChillCordDev
 
 # Images
 src/assets/logo.svg @TheRealToxicDev
-src/assets/discord.svg @ChillCordDev
-src/assets/github.svg @ChillCordDev
-src/assets/twitter.svg @ChillCordDev
+src/assets/discord.svg @TheRealToxicDev
+src/assets/github.svg @TheRealToxicDev
+src/assets/twitter.svg @TheRealToxicDev
 
 # Main Docs
 content/index.md @ChillCordDev
