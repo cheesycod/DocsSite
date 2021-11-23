@@ -1,0 +1,48 @@
+---
+title: ibl-webhook
+description: Official method for Handling your Custom Webhook
+---
+
+import HTTPHeader from "@components/HTTPHeader";
+
+<div align="center">
+  <p>
+    <a href="https://nodei.co/npm/infinity-bots/"><img src="https://nodei.co/npm/infinity-bots.png?downloads=true&stars=true" alt="npm installnfo" /></a>
+  </p>
+</div>
+
+This is our Official NPM Module used for tracking Votes to a custom Webhook.
+
+--- 
+
+## Installation
+`npm i infinity-bots@latest`
+
+---
+
+## Links
+
+- Support: [Join our Discord](https://botlist.site/discord)
+
+---
+
+## Example
+```js
+const express = require('express')
+const Infinity = require('infinity-bots')
+
+const app = express() // Your express app
+
+const webhook = new Infinity.Webhook('Some_Auth_Token') // Add your Webhooks Auth Token
+
+app.post('/votes', webhook.hookListener(vote => {
+  console.log(vote.user)
+}))
+
+app.listen(3000) // your port
+
+```
+
+---
+
+
