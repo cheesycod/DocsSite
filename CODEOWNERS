@@ -8,15 +8,12 @@ README.md @ChillCordDev
 gatsby-config.js @TheRealToxicDev
 
 # Components
-src/components/Logo.jsx @ChillCordDev
-src/components/HTTPHeader.jsx @ChillCordDev
-src/components/Message.jsx @ChillCordDev
+src/components/ @ChillCordDev
+
 
 # Images
-src/assets/logo.svg @TheRealToxicDev
-src/assets/discord.svg @TheRealToxicDev
-src/assets/github.svg @TheRealToxicDev
-src/assets/twitter.svg @TheRealToxicDev
+src/assets/ @TheRealToxicDev
+
 
 # Main Docs
 content/index.md @ChillCordDev
