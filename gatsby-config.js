@@ -21,7 +21,7 @@ module.exports = {
         discordUrl: "https://infinitybotlist.com/discord",
         twitterHandle: "InfinityBotList",
         description: "Official Documentation for the Infinity Bot List Website, Discord Server, Staff Team and API",
-        githubRepo: "ChillCordDev/API-Docs",
+        githubRepo: "InfinityBotList/DocsSite",
         baseUrl: "https://docs.botlist.site",
         // defaultVersion: "0",
         // versions: {
