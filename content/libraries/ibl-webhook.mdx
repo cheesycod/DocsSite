@@ -26,8 +26,8 @@ This is our Official NPM Module used for tracking Votes to a custom Webhook.
 
 ---
 
-## Example
-```js
+## Example (Express)
+```jstitle=Discord.js v13
 const express = require('express')
 const Infinity = require('infinity-bots')
 
@@ -35,8 +35,22 @@ const app = express() // Your express app
 
 const webhook = new Infinity.Webhook('Some_Auth_Token') // Add your Webhooks Auth Token
 
-app.post('/votes', webhook.hookListener(vote => {
-  console.log(vote.user)
+app.post('/votes', webhook.hookListener(async (vote, req, res) => {
+
+        let client = req.app.get('client')
+  
+        let user = client.users.cache.get(vote.userID) || vote.userID
+
+        let voteLog = new MessageEmbed()
+          .setTitle('⬆️ UpVote Logs')
+          .setColor('#0EFF00')
+          .setDescription(`Somone has voted for me on [Infinity Bot List](https://infinitybotlist.com/bots/BOT_ID/vote)`)
+          .addField('User', `${user}`, true)
+          .addField('User ID', `${vote.userID}`, true
+          .setTimestamp()
+            
+        await client.guilds.cache.get('Some_Server_ID').channels.cache.get('Some_Channel_ID').send({ embeds: [voteLog] }); 
+
 }))
 
 app.listen(3000) // your port
@@ -44,5 +58,35 @@ app.listen(3000) // your port
 ```
 
 ---
+
+## Example (Fastify)
+```jstitle=Discord.js v13
+const Infinity = require('infinity-bots');
+
+const webhook = new Infinity.Webhook('Some_Auth_Token')
+
+const voteHook = (fastify, options, done) => {
+    
+    fastify.post("/vote", webhook.hookListener(async (vote, req, res) => {
+
+        let client = req.client
+        
+        let user = client.users.cache.get(vote.userID) || vote.userID
+
+        let voteLog = new MessageEmbed()
+          .setTitle('⬆️ UpVote Logs')
+          .setColor('#0EFF00')
+          .setDescription(`Somone has voted for me on [Infinity Bot List](https://infinitybotlist.com/bots/BOT_ID/vote)`)
+          .addField('User', `${user}`, true)
+          .addField('User ID', `${vote.userID}`, true
+          .setTimestamp()
+            
+        await client.guilds.cache.get('Some_Server_ID').channels.cache.get('Some_Channel_ID').send({ embeds: [voteLog] }); 
+       
+    }));
+
+    done()
+  };
+```
 
 
