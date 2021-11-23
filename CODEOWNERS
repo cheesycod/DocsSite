@@ -25,26 +25,20 @@ content/index.md @ChillCordDev
 darkmode.css @TheRealToxicDev
 
 # API
-content/api/@intro.mdx @ChillCordDev
-content/api/user.mdx @ChillCordDev
-content/api/bot.mdx @TheRealToxicDev
-content/api/votes.mdx @ChillCordDev
+content/api/ @ChillCordDev
+
 
 # Libraries
 content/libraries/ @TheRealToxicDev
 
 
 # Resources
-content/resources/ratelimits.mdx @ChillCordDev
-content/resources/webhooks.mdx @ChillCordDev
-content/resources/widgets.mdx @TheRealToxicDev
-content/resources/usage.mdx @TheRealToxicDev
-content/resources/downtime.mdx @TheRealToxicDev
+content/resources/ @ChillCordDev
+
 
 # Server
-content/server/bot-rules.mdx @ChillCordDev
-content/server/server-rules.mdx @TheRealToxicDev
-content/server/server-guidelines.mdx @TheRealToxicDev
+content/server/ @ChillCordDev
+
 
 # Staff
-content/staff/infractions.mdx @TheRealToxicDev
+content/staff/ @TheRealToxicDev
