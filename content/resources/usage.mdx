@@ -15,7 +15,7 @@ get you started xD
 
 ```js:title=POST
 const fetch = require("node-fetch")
-fetch(`https://api.infinitybotlist.com/bot/bot-id-here`, {
+fetch(`https://api.infinitybotlist.com/bots/stats`, {
             method: "POST",
             headers: {
                 "authorization": "api-key-here",
@@ -30,7 +30,7 @@ fetch(`https://api.infinitybotlist.com/bot/bot-id-here`, {
 
 ```js:title=GET
 const fetch = require("node-fetch")
-fetch(`https://api.infinitybotlist.com/bot/bot-id-here/info`, {
+fetch(`https://api.infinitybotlist.com/bot/:botID`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -54,5 +54,5 @@ session = aiohttp.ClientSession(loop=bot.loop)
         "servers": len(bot.guilds),
         "shards": bot.shard_count or 0
       }
-      await session.post(f"https://api.infinitybotlist.com/bots/{bot.user.id}", headers=headers, json=payload)
+      await session.post(f"https://api.infinitybotlist.com/bots/stats", headers=headers, json=payload)
 ```
