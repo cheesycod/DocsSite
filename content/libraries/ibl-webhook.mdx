@@ -62,14 +62,12 @@ const webhook = new Infinity.Webhook('Some_Auth_Token') // Add your Webhooks Aut
 app.post('/votes', webhook.hookListener(async (vote, req, res) => {
 
         let client = req.app.get('client')
-  
-        let user = client.users.cache.get(vote.userID) || vote.userID
 
         let voteLog = new MessageEmbed()
           .setTitle('⬆️ UpVote Logs')
           .setColor('#0EFF00')
           .setDescription(`Somone has voted for me on [Infinity Bot List](https://infinitybotlist.com/bots/BOT_ID/vote)`)
-          .addField('User', `${user}`, true)
+          .addField('User', `${vote.userName}`, true)
           .addField('User ID', `${vote.userID}`, true
           .setTimestamp()
             
@@ -94,14 +92,12 @@ const voteHook = (fastify, options, done) => {
     fastify.post("/vote", webhook.hookListener(async (vote, req, res) => {
 
         let client = req.client
-        
-        let user = client.users.cache.get(vote.userID) || vote.userID
 
         let voteLog = new MessageEmbed()
           .setTitle('⬆️ UpVote Logs')
           .setColor('#0EFF00')
           .setDescription(`Somone has voted for me on [Infinity Bot List](https://infinitybotlist.com/bots/BOT_ID/vote)`)
-          .addField('User', `${user}`, true)
+          .addField('User', `${vote.userName}`, true)
           .addField('User ID', `${vote.userID}`, true
           .setTimestamp()
             
