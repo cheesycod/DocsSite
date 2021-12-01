@@ -23,13 +23,13 @@ Fetch some information about a specific bot from the Infinity Bot List API.
 
 ## POST Bot Stats
 
-<HTTPHeader type="POST" path="bot/:bot_id" />
+<HTTPHeader type="POST" path="bots/stats" />
 
 ### Ratelimits 
 
 | Route           | Request Type | Max Requests | Throttle     |
 | --------------- | ------------ | ------------ | ------------ |
-| `/bot/:botID`  | `POST`       | 3/5 Minutes  | 30 Min block |
+| `/bots/stats`   | `POST`       | 3/5 Minutes  | 30 Min block |
 
 
 ### Post Headers
@@ -43,7 +43,6 @@ Fetch some information about a specific bot from the Infinity Bot List API.
 
 | Field        | Type                   | Description                                                                                       | Required |
 | ------------ | ---------------------- | ------------------------------------------------------------------------------------------------- | -------- |
-| botid        | `Snowflake`            | The Bots Discord Client ID                                                                        | ✔️       |
 | servers      | `Number`               | Amount of servers the bot is in.                                                                  | ✔️       |
 | shards       | `Number`               | Amount of shards the bot has.                                                                     | ❌       |
 
