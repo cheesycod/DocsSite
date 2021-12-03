@@ -5,7 +5,7 @@
 </h2>
 
 <p>
- Official Documentation site for the Infinity Bot List Website, Discord Server, Staff Team and API
+ Official Documentation site for the Infinity Bot List Website, Discord Server, Staff Team and API!
 </p>
 
 <hr />
