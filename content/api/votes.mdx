@@ -56,3 +56,16 @@ Fetch the last 100 Votes for a Bot!
 | userID          | The ID of the User who Voted                          |
 | botID           | The ID of the Bot who Recieved the Vote               |
 | __V             | Staff Usage. Nothing you need to know!                |
+
+---
+
+## Check if User has Voted
+Fetch the last 100 Votes for a Bot!
+
+<HTTPHeader type="GET" path="votes/:botID/:userID" />
+
+### Response 
+
+| Response        | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| hasVoted        | If the user has Voted Recently (True or False)        |
