@@ -48,12 +48,14 @@ Responses to webhooks must be returned within 5 seconds, otherwise they are cons
 The format of the data your webhook URL will receive in a `POST` request.
 
 #### Bot Webhooks
-| Field     | Type        | Description                                                                                         |
-| --------- | ----------- | --------------------------------------------------------------------------------------------------- |
-| bot       | `snowflake` | Discord ID of the bot that received a vote.                                                         |
-| name      | `string`    | Discord Username of the bot that received a vote.                                                   |
-| user      | `snowflake` | Discord ID of the user who voted.                                                                   |
-| amount    | `string`    | Amount of votes the bot has in total.                                                               |
+| Param       | Description                                                                      |
+| ----------- | -------------------------------------------------------------------------------- |
+| botID       | The Discord ID (Snowflake) for the Bot who Recieved a Vote                       |
+| userID      | The Discord ID (Snowflake) of the User who Voted                                 |
+| userName    | The Username of the User who Voted                                               |
+| count       | The Bots new Vote Count                                                          |
+| timestamp   | The Date and Time of the Vote                                                    |
+| type        | The TYPE of Request (Should always be "VOTE" or "TEST" for test Requests)        |
 
 ---
 
