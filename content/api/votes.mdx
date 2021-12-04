@@ -37,3 +37,19 @@ Unacceptable use of our API (breaking these rules will result in appropriate pun
 * First Offence - A stern warning from one of our beautiful moderators and possible reverting of bot votes.
 * Second Offence - If you haven't changed your ways after your first offence, or you are caught breaking these rules a second time, we will lock your access to the voting endpoint(s) and reset your votes.
 * We reserve the right to not follow these consequences in the exact order they are laid out here and take action how we see fit dependant on the scenario
+
+---
+
+## Voting Endpoints
+
+## Get Bot Votes
+Fetch the last 100 Votes for a Bot!
+
+<HTTPHeader type="GET" path="votes/:botID" />
+
+### Response 
+
+| Response        | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| bot_votes       | Array of the last 100 Votes                           |
+| _id              |
