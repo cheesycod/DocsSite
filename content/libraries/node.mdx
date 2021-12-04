@@ -1,0 +1,43 @@
+---
+title: Infinity Bots API
+description: Our Official Javascript Library!
+---
+
+import HTTPHeader from "@components/HTTPHeader";
+
+<div align="center">
+  <p>
+    <a href="https://nodei.co/npm/infinity-bots/"><img src="https://nodei.co/npm/infinity-bots.png?downloads=true&stars=true" alt="npm installnfo" /></a>
+  </p>
+</div>
+
+This is our Official NPM Module used for Posting and Getting Stats.
+
+--- 
+
+## Installation
+`npm i infinity-bots@latest`
+
+---
+
+## Links
+
+- Support: [Join our Discord](https://botlist.site/discord)
+
+---
+
+## postBotStats()
+```js:title=Discord.js-v13
+   const poster = new InfinityBots('AUTH_TOKEN', client.user.id);
+
+   await poster.postBotStats({
+      servers: client.guilds.cache.size,
+      shards: '0'
+   }).catch((err) => {
+      return console.log(`Error occured while posting stats: ${err.stack}`);
+   });
+   
+   console.log('Posted stats to Infinity Bot List!');
+```
+
+---
