@@ -212,3 +212,99 @@ const voteHook = (fastify, options, done) => {
     done()
   };
 ```
+
+---
+
+# Voting Module
+
+<div align="center">
+  <p>
+    <a href="https://nodei.co/npm/infinitybots-votes.js/"><img src="https://nodei.co/npm/infinitybots-votes.js.png?downloads=true&stars=true" alt="npm installnfo" /></a>
+  </p>
+</div>
+
+This is our Official NPM Module used for interacting with your bots Votes.
+
+--- 
+
+## Installation
+`npm i infinitybots-votes.js@latest`
+
+---
+
+## Links
+
+- Support: [Join our Discord](https://botlist.site/discord)
+
+---
+
+## checkUserVoted()
+
+###### Response Paramaters
+| Param       | Description                                                                      |
+| ----------- | -------------------------------------------------------------------------------- |
+| hasVoted    | If the User has Voted in the last 6 Hours (True or False)                        |
+
+
+---
+
+###### Example (Express)
+```js:title=Discord.js%20v13%20Command
+const { MessageEmbed } = require('discord.js');
+const moment = require('moment');
+const fetch = require('node-fetch');
+
+const IBLVotes = require('infinitybots-votes.js');
+const voteData = new IBLVotes()
+
+module.exports.run = async (client, message, args, params) => {
+
+    let user = message.mentions.members.first() || client.users.cache.get(args[0]);
+  
+    if (!user) return message.channel.send("Please provide a user to check if the have voted");
+    
+    await voteData.checkUserVoted(client.user.id, user.id, function(data) {
+        
+        if (data.hasVoted) {
+
+          let embed = new MessageEmbed()
+            .setTitle('Vote Check')
+            .setColor('GREEN')
+            .setDescription(`<@!${user.id}> has voted within the last 6 Hours!`)
+
+           return message.channel.send(embeds: [embed])
+            
+        } else {
+            
+          let embed = new MessageEmbed()
+            .setTitle('Vote Check')
+            .setColor('RED')
+            .setDescription(`<@!${user.id}> has not voted within the last 6 Hours!`)
+
+
+           return message.channel.send(embeds: [embed])
+        }
+    })
+}
+
+module.exports.help = {
+    name: 'has-voted',
+    category: 'owner',
+    aliases: ['cv', 'check-voted'],
+    description: 'Check if a User has Voted',
+    example: '``has-voted``'
+}
+
+module.exports.requirements = {
+    userPerms: [],
+    clientPerms: ['SEND_MESSAGES', 'EMBED_LINKS'],
+    ownerOnly: true,
+}
+
+module.exports.limits = {
+    rateLimit: 2,
+    cooldown: 1e4
+}
+
+```
+
