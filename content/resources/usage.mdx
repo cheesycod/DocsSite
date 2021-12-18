@@ -51,8 +51,8 @@ session = aiohttp.ClientSession(loop=bot.loop)
         
       }
       payload= {
-        "servers": len(bot.guilds),
-        "shards": bot.shard_count or 0
+        "servers": len(bot.guilds) or "0",
+        "shards": bot.shard_count or "0"
       }
       await session.post(f"https://api.infinitybotlist.com/bots/stats", headers=headers, json=payload)
 ```
