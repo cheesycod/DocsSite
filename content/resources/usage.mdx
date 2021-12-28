@@ -56,8 +56,7 @@ async def post_stats():
             "shards": bot.shard_count or "0"   # Change this if you use custom clustering
         }
         async with sess.post(f"https://api.infinitybotlist.com/bots/stats", headers=headers, json=payload) as res:
-            # Do something
-            if res.status == 200:
-                # success
-            elif ...
+            # Do something with the response. EX
+            # if res.status == 200:
+            # ...
 ```
