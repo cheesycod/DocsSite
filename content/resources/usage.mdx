@@ -44,15 +44,16 @@ fetch(`https://api.infinitybotlist.com/bot/:botID`, {
 
 ```python:title=POST
 import aiohttp
-session = aiohttp.ClientSession(loop=bot.loop)
-      headers= {
-        "authorization": "Your api token",
-        "Content-Type": "application/json"
-        
-      }
-      payload= {
-        "servers": len(bot.guilds) or "0",
-        "shards": bot.shard_count or "0"
-      }
-      await session.post(f"https://api.infinitybotlist.com/bots/stats", headers=headers, json=payload)
+
+# In a async function
+async def post_stats():
+    async with aiohttp.ClientSession() as sess:
+        headers= {
+            "authorization": "Your api token",       
+        }
+        payload= {
+            "servers": len(bot.guilds) or "0", # Change this if you use custom clustering
+            "shards": bot.shard_count or "0"   # Change this if you use custom clustering
+        }
+        await sess.post(f"https://api.infinitybotlist.com/bots/stats", headers=headers, json=payload)
 ```
